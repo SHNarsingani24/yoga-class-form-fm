@@ -38,11 +38,11 @@ export const Form = () => {
     const handlePayment = () => {
         alert("Processing Payment.");
         console.log(JSON.stringify(details));
-        fetch('http://localhost:3001/payment')
+        fetch('https://yoga-class-fm-api.onrender.com/payment')
             .then(res => {
                 if (res.status === 200) {
                     setPaid(true);
-                    fetch('http://localhost:3001/enroll', {
+                    fetch('https://yoga-class-fm-api.onrender.com/enroll', {
                         method: "POST",
                         mode: "cors",
                         credentials: "include",
